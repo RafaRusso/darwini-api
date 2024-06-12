@@ -7,11 +7,11 @@ export interface UserProps {
   email: string;
 }
 
-export class User<Props> {
+export class User {
   protected id: string;
-  protected props: Props & UserProps;
+  protected props: UserProps;
 
-  constructor(props: Props & UserProps, id?: string) {
+  constructor(props: UserProps, id?: string) {
     this.id = id ?? randomUUID();
     this.props = props;
   }
